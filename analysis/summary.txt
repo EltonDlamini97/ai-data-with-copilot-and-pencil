@@ -1,0 +1,11 @@
+Rows: 600
+Placement rate: 64.50%
+Average CGPA: 2.98
+
+By degree:
+          Degree  count  placed_pct  avg_CGPA   avg_salary
+            Arts    125    0.600000  3.008720 11388.267067
+        Business    125    0.648000  2.984240 11989.259383
+Computer Science    112    0.669643  2.842946 11435.666000
+    Data Science    120    0.658333  2.957833 11174.003671
+     Engineering    118    0.652542  3.089746 11812.700000

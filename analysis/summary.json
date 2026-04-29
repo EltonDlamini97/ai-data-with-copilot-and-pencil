@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "rows": 600,
+    "placement_rate": 0.645,
+    "avg_CGPA": 2.9784333333333333,
+    "avg_tech_skill": 69.38,
+    "avg_comm_skill": 68.91333333333333,
+    "avg_aptitude": 69.42666666666666
+  },
+  "by_degree": [
+    {
+      "Degree": "Arts",
+      "count": 125,
+      "placed_pct": 0.6,
+      "avg_CGPA": 3.00872,
+      "avg_salary": 11388.267066666667
+    },
+    {
+      "Degree": "Business",
+      "count": 125,
+      "placed_pct": 0.648,
+      "avg_CGPA": 2.98424,
+      "avg_salary": 11989.25938271605
+    },
+    {
+      "Degree": "Computer Science",
+      "count": 112,
+      "placed_pct": 0.6696428571428571,
+      "avg_CGPA": 2.842946428571429,
+      "avg_salary": 11435.666
+    },
+    {
+      "Degree": "Data Science",
+      "count": 120,
+      "placed_pct": 0.6583333333333333,
+      "avg_CGPA": 2.9578333333333333,
+      "avg_salary": 11174.003670886077
+    },
+    {
+      "Degree": "Engineering",
+      "count": 118,
+      "placed_pct": 0.652542372881356,
+      "avg_CGPA": 3.089745762711864,
+      "avg_salary": 11812.699999999999
+    }
+  ]
+}

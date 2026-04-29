@@ -1,0 +1,9 @@
+Top correlated numeric features with placement (abs corr):
+CGPA                              0.091339
+Projects_Count                    0.056584
+Aptitude_Test_Score_100           0.025087
+Certifications_Count              0.021875
+Technical_Skills_Score_100        0.012026
+Internships_Count                 0.011656
+Communication_Skills_Score_100    0.007337
+Salary_Offered_USD                0.003843
