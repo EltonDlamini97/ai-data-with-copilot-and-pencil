@@ -6,15 +6,15 @@
   <!-- Metrics -->
   <rect x='40' y='80' width='260' height='110' class='tile' fill='#d0e7ff'/>
   <text x='160' y='120' font-size='16' text-anchor='middle'>Placement Rate</text>
-  <text x='160' y='145' id='placement-rate' font-size='20' font-weight='bold' text-anchor='middle'>--</text>
+  <text x='160' y='145' id='placement-rate' font-size='20' font-weight='bold' text-anchor='middle'>64.5%</text>
 
   <rect x='320' y='80' width='260' height='110' class='tile' fill='#e6ffed'/>
   <text x='450' y='120' font-size='16' text-anchor='middle'>Average CGPA</text>
-  <text x='450' y='145' id='avg-cgpa' font-size='20' font-weight='bold' text-anchor='middle'>--</text>
+  <text x='450' y='145' id='avg-cgpa' font-size='20' font-weight='bold' text-anchor='middle'>2.98</text>
 
   <rect x='600' y='80' width='260' height='110' class='tile' fill='#fff5e6'/>
   <text x='730' y='120' font-size='16' text-anchor='middle'>Avg Salary (Placed)</text>
-  <text x='730' y='145' id='avg-salary' font-size='20' font-weight='bold' text-anchor='middle'>--</text>
+  <text x='730' y='145' id='avg-salary' font-size='20' font-weight='bold' text-anchor='middle'>$11,563.95</text>
 
   <!-- Charts placeholders -->
   <rect x='40' y='210' width='560' height='350' class='tile' />
