@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <style>text{font-family:Arial,Helvetica,sans-serif;font-size:14px;} .box{fill:#ffffff;stroke:#222;stroke-width:2;} .soft{fill:#e8f4ff;} .llm{fill:#d0e7ff;stroke:#2b6cb0;stroke-width:2;} .exec{fill:#e6ffed;stroke:#2f855a;stroke-width:2;} .safety{fill:#fff5e6;stroke:#dd6b20;stroke-width:2;} .hw{fill:#f0f0f0;stroke:#4a5568;stroke-width:2;} .arrow{stroke:#222;stroke-width:2;fill:none;marker-end:url(#arrowhead);} </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#222"/></marker>
+  </defs>
+
+  <!-- Boxes -->
+  <rect x="50" y="40" width="200" height="50" class="box soft"/>
+  <text x="150" y="70" text-anchor="middle">User Instruction (NL)</text>
+
+  <rect x="50" y="130" width="220" height="60" class="box soft"/>
+  <text x="160" y="160" text-anchor="middle">Prompt Engine</text>
+
+  <rect x="320" y="130" width="220" height="60" class="box llm"/>
+  <text x="430" y="160" text-anchor="middle">Planner (LLM)</text>
+  <text x="430" y="178" text-anchor="middle" font-size="12">(chain-of-thought)</text>
+
+  <rect x="320" y="240" width="220" height="60" class="box exec"/>
+  <text x="430" y="270" text-anchor="middle">Skill Selector</text>
+  <text x="430" y="288" text-anchor="middle" font-size="12">(affordances)</text>
+
+  <rect x="320" y="360" width="220" height="60" class="box exec"/>
+  <text x="430" y="390" text-anchor="middle">Simulator</text>
+  <text x="430" y="408" text-anchor="middle" font-size="12">(validate plan)</text>
+
+  <rect x="680" y="240" width="240" height="60" class="box exec"/>
+  <text x="800" y="270" text-anchor="middle">Executor (Controllers)</text>
+
+  <rect x="680" y="360" width="240" height="60" class="box safety"/>
+  <text x="800" y="390" text-anchor="middle">Safety Middleware</text>
+  <text x="800" y="408" text-anchor="middle" font-size="12">(checks, H-in-loop)</text>
+
+  <rect x="680" y="480" width="240" height="60" class="box hw"/>
+  <text x="800" y="510" text-anchor="middle">Hardware</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M150,90 L150,130"/>
+  <path class="arrow" d="M270,160 L320,160"/>
+  <path class="arrow" d="M430,190 L430,240"/>
+  <path class="arrow" d="M430,320 L430,360"/>
+  <path class="arrow" d="M430,420 L560,420 L560,270"/>
+  <path class="arrow" d="M540,270 L680,270"/>
+  <path class="arrow" d="M800,300 L800,360"/>
+  <path class="arrow" d="M800,420 L800,480"/>
+  <path class="arrow" d="M560,420 L680,420" stroke-dasharray="6,4"/>
+
+  <!-- Notes -->
+  <text x="160" y="220" font-size="12">Logging / Audit</text>
+  <line x1="160" y1="205" x2="160" y2="140" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <text x="540" y="340" font-size="12">If OK →</text>
+
+</svg>
