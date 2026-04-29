@@ -38,6 +38,13 @@ import cairosvg
 cairosvg.svg2png(url='analysis/dashboard.svg', write_to='analysis/dashboard.png')
 PY
 
+      - name: Convert dashboard.svg to PDF
+        run: |
+          python - <<'PY'
+import cairosvg
+cairosvg.svg2pdf(url='analysis/dashboard.svg', write_to='analysis/dashboard.pdf')
+PY
+
       - name: Commit and push generated images
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

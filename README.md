@@ -1,5 +1,7 @@
 # AI Data with Copilot and Pencil
 
+![Generate Dashboard Images](https://github.com/EltonDlamini97/ai-data-with-copilot-and-pencil/actions/workflows/generate-dashboard.yml/badge.svg)
+
 This repository contains an experimental agent scaffold, research report, and visualization assets for "Prompt engineering and the future of robotics" along with an analysis of a student placement dataset and a dashboard.
 
 Contents
