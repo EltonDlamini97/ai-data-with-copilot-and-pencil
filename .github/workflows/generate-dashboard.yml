@@ -2,15 +2,20 @@ name: Generate Dashboard Images
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths:
       - 'analysis/**'
       - 'powerbi/**'
       - '.github/workflows/generate-dashboard.yml'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -25,36 +30,51 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas matplotlib seaborn cairosvg pillow
+          pip install pandas matplotlib cairosvg pillow
 
       - name: Run analysis script
         run: |
           python analysis/analyze_csv.py
 
-      - name: Convert dashboard.svg to PNG
+      - name: Convert SVG to PNG
         run: |
           python - <<'PY'
 import cairosvg
-cairosvg.svg2png(url='analysis/dashboard.svg', write_to='analysis/dashboard.png')
+
+cairosvg.svg2png(
+    url='analysis/dashboard.svg',
+    write_to='analysis/dashboard.png'
+)
+
+print("PNG generated successfully")
 PY
 
-      - name: Convert dashboard.svg to PDF
+      - name: Convert SVG to PDF
         run: |
           python - <<'PY'
 import cairosvg
-cairosvg.svg2pdf(url='analysis/dashboard.svg', write_to='analysis/dashboard.pdf')
+
+cairosvg.svg2pdf(
+    url='analysis/dashboard.svg',
+    write_to='analysis/dashboard.pdf'
+)
+
+print("PDF generated successfully")
 PY
 
-      - name: Commit and push generated images
+      - name: Commit and push generated files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analysis/*.png analysis/dashboard.epgz || true
+
+          git add analysis/dashboard.png
+          git add analysis/dashboard.pdf
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-generate dashboard images [skip ci]"
+            git commit -m "Auto-generate dashboard assets [skip ci]"
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
           fi
